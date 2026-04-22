@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Blog profesional sobre la administración pública local y el papel de los Funcionarios con Habilitación de Carácter Nacional en España. Secretario de Ayuntamiento en Moralzarzal y Galapagar.">
+<meta name="keywords" content="habilitados nacionales, secretario ayuntamiento, administración local, FHCN, función pública local, transformación digital administración">
+<meta name="author" content="Funcionario con Habilitación de Carácter Nacional">
+<meta property="og:title" content="HabilitadosNacionales.es — Administración Pública Local">
+<meta property="og:description" content="Del escribano de concejo al todista municipal. Blog profesional sobre habilitados nacionales y administración local.">
+<meta property="og:url" content="https://www.habilitadosnacionales.es">
+<title>HabilitadosNacionales.es — Administración Pública Local</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0d2240;
+  --navy-mid: #1a3a5c;
+  --gold: #b8882a;
+  --gold-light: #e8c870;
+  --cream: #faf8f4;
+  --warm-white: #ffffff;
+  --text-main: #1a1a1a;
+  --text-muted: #5a6070;
+  --text-light: #8a93a0;
+  --border: #e2ddd6;
+  --shadow: 0 2px 20px rgba(13,34,64,0.08);
+  --serif: 'EB Garamond', Georgia, serif;
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--text-main);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navy);
+  border-bottom: 2px solid var(--gold);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cream);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.nav-logo span { color: var(--gold-light); }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color .2s;
+  cursor: pointer;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+.nav-search {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 5px 14px;
+  color: white;
+  font-size: 0.85rem;
+  font-family: var(--sans);
+  width: 180px;
+  outline: none;
+}
+.nav-search::placeholder { color: rgba(255,255,255,0.4); }
+.nav-search:focus { background: rgba(255,255,255,0.15); border-color: var(--gold); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #2a4a70 100%);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(184,136,42,0.2);
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.hero-subtitle {
+  color: rgba(255,255,255,0.65);
+  font-size: 1.05rem;
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+.hero-stats {
+  display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap;
+  position: relative;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  display: block;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+  display: block;
+}
+
+/* FILTERS */
+.filters-bar {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 2rem;
+  display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;
+}
+.filter-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  font-family: var(--sans);
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all .2s;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: white;
+}
+.filter-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+/* MAIN LAYOUT */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+  align-items: start;
+}
+
+/* ARTICLE CARDS */
+.articles-section { display: flex; flex-direction: column; gap: 0; }
+.section-title {
+  font-family: var(--serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: 1.5rem;
+}
+
+.article-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: all .2s;
+  align-items: start;
+}
+.article-card:first-of-type { border-top: none; }
+.article-card:hover { padding-left: 6px; }
+.article-card:hover .card-title { color: var(--navy-mid); }
+
+.card-cat {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+.card-title {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+  transition: color .2s;
+}
+.card-excerpt {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-meta {
+  display: flex; gap: 0.75rem; align-items: center; margin-top: 0.6rem;
+  font-size: 0.75rem; color: var(--text-light);
+}
+.card-date-col {
+  text-align: right;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  white-space: nowrap;
+  padding-top: 0.4rem;
+}
+.card-year { display: block; font-family: var(--serif); font-size: 1.1rem; color: var(--navy); font-weight: 600; }
+.card-monthday { display: block; margin-top: 1px; }
+
+/* FEATURED CARD */
+.article-card.featured {
+  grid-template-columns: 1fr;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.6rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+.article-card.featured:hover { box-shadow: 0 4px 30px rgba(13,34,64,0.12); padding-left: 1.6rem; }
+.featured .card-title { font-size: 1.5rem; }
+.featured-badge {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+}
+
+/* SIDEBAR */
+.sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+.sidebar-card {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+.sidebar-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--navy);
+}
+.author-card { text-align: center; }
+.author-avatar {
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: var(--navy);
+  margin: 0 auto 0.75rem;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.6rem; font-weight: 700;
+  color: var(--gold-light);
+  border: 3px solid var(--gold);
+}
+.author-name {
+  font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--navy);
+}
+.author-role { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+.author-bio { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem; line-height: 1.6; text-align: left; }
+
+.topic-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.topic-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background .2s;
+}
+.topic-item:hover { background: var(--cream); }
+.topic-name { color: var(--text-main); }
+.topic-count {
+  background: var(--navy);
+  color: white;
+  font-size: 0.7rem;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.subscribe-form { display: flex; flex-direction: column; gap: 0.5rem; }
+.subscribe-form input {
+  width: 100%; padding: 8px 12px;
+  border: 1px solid var(--border); border-radius: 5px;
+  font-size: 0.85rem; font-family: var(--sans);
+  outline: none; background: var(--cream);
+}
+.subscribe-form input:focus { border-color: var(--navy); }
+.subscribe-btn {
+  background: var(--navy); color: white;
+  border: none; border-radius: 5px;
+  padding: 9px; font-size: 0.85rem; font-weight: 500;
+  font-family: var(--sans); cursor: pointer; transition: background .2s;
+}
+.subscribe-btn:hover { background: var(--navy-mid); }
+.subscribe-note { font-size: 0.72rem; color: var(--text-light); }
+
+/* ARTICLE VIEW */
+#article-view { display: none; }
+.article-view-inner {
+  max-width: 720px; margin: 0 auto; padding: 3rem 2rem;
+}
+.article-nav {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.82rem; color: var(--text-light);
+  margin-bottom: 2rem; cursor: pointer;
+}
+.article-nav:hover { color: var(--navy); }
+.article-header { margin-bottom: 2.5rem; }
+.article-cat {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;
+}
+.article-title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.article-meta {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--text-light);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+.article-body {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  line-height: 1.85;
+  color: #2a2a2a;
+}
+.article-body p { margin-bottom: 1.25rem; }
+.article-body h2 {
+  font-size: 1.5rem; font-weight: 700; color: var(--navy);
+  margin: 2.5rem 0 1rem; line-height: 1.3;
+}
+.article-body h3 {
+  font-size: 1.2rem; font-weight: 600; color: var(--navy-mid);
+  margin: 2rem 0 0.75rem;
+}
+.article-body ul, .article-body ol {
+  margin: 1rem 0 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.4rem;
+}
+.article-body li { font-size: 1rem; }
+.article-body strong { font-weight: 600; color: var(--navy); }
+.article-body em { font-style: italic; }
+.article-body blockquote {
+  border-left: 3px solid var(--gold);
+  margin: 1.5rem 0; padding: 0.75rem 1.25rem;
+  background: rgba(184,136,42,0.06); border-radius: 0 5px 5px 0;
+  font-style: italic;
+}
+.article-body a { color: var(--navy-mid); }
+.wp-link-box {
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.25rem 1.5rem; margin-top: 2rem;
+  font-size: 0.875rem; color: var(--text-muted); text-align: center;
+  font-family: var(--sans);
+}
+.wp-link-box a {
+  color: var(--navy); font-weight: 500; text-decoration: none;
+  border-bottom: 1px solid var(--navy);
+}
+
+/* ABOUT PAGE */
+#about-view { display: none; }
+.about-inner { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+.about-hero {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 2rem; align-items: start; margin-bottom: 3rem;
+}
+.about-avatar {
+  width: 120px; height: 120px; border-radius: 50%;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 3rem; font-weight: 700;
+  color: var(--gold-light);
+  border: 4px solid var(--gold);
+  flex-shrink: 0;
+}
+.about-title-block h1 {
+  font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.about-role { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
+.badge-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.credential-badge {
+  background: var(--navy); color: var(--gold-light);
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em;
+  padding: 4px 12px; border-radius: 20px;
+}
+.about-section { margin-bottom: 2.5rem; }
+.about-section h2 {
+  font-family: var(--serif); font-size: 1.4rem; font-weight: 700;
+  color: var(--navy); border-bottom: 2px solid var(--navy);
+  padding-bottom: 0.5rem; margin-bottom: 1rem;
+}
+.about-section p {
+  font-family: var(--serif); font-size: 1.05rem; line-height: 1.8;
+  color: #2a2a2a; margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  font-size: 0.82rem;
+  margin-top: 3rem;
+  border-top: 2px solid var(--gold);
+}
+footer a { color: var(--gold-light); text-decoration: none; }
+footer .footer-logo {
+  font-family: var(--serif); font-size: 1.2rem; color: white;
+  margin-bottom: 0.5rem; font-weight: 600;
+}
+
+/* UTILS */
+.hidden { display: none !important; }
+.no-results {
+  padding: 3rem; text-align: center; color: var(--text-light);
+  font-size: 0.9rem; grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  nav { padding: 0 1rem; }
+  .nav-search { display: none; }
+  .nav-links { gap: 1rem; }
+  .main-grid { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .container { padding: 0 1rem; }
+  .about-hero { grid-template-columns: 1fr; text-align: center; }
+  .about-avatar { margin: 0 auto; }
+  .badge-row { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" onclick="showHome()">Habilitados<span>Nacionales</span>.es</a>
+  <ul class="nav-links">
+    <li><a onclick="showHome()" id="nav-home" class="active">Inicio</a></li>
+    <li><a onclick="showAbout()" id="nav-about">Sobre mí</a></li>
+    <li><a href="https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com" target="_blank">WordPress ↗</a></li>
+  </ul>
+  <input class="nav-search" type="text" placeholder="Buscar artículos…" oninput="searchArticles(this.value)" id="search-input">
+</nav>
+
+<!-- HOME VIEW -->
+<div id="home-view">
+  <div class="hero">
+    <div class="hero-badge">Blog Profesional · Administración Local</div>
+    <h1>Del escribano de concejo<br>al <em>todista municipal</em></h1>
+    <p class="hero-subtitle">Reflexiones, análisis y propuestas sobre la administración pública local y el papel de los Habilitados Nacionales en la España del siglo XXI.</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Artículos</span></div>
+      <div class="stat"><span class="stat-num">235+</span><span class="stat-label">Suscriptores</span></div>
+      <div class="stat"><span class="stat-num">2019</span><span class="stat-label">Activo desde</span></div>
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label">Temáticas</span></div>
+    </div>
+  </div>
+
+  <div class="filters-bar">
+    <span class="filter-label">Temas:</span>
+    <button class="filter-btn active" onclick="filterCat('all',this)">Todos</button>
+    <button class="filter-btn" onclick="filterCat('Transformación Digital',this)">Transformación Digital</button>
+    <button class="filter-btn" onclick="filterCat('Habilitados Nacionales',this)">Habilitados Nacionales</button>
+    <button class="filter-btn" onclick="filterCat('Recursos Humanos',this)">Recursos Humanos</button>
+    <button class="filter-btn" onclick="filterCat('Contratación Pública',this)">Contratación Pública</button>
+    <button class="filter-btn" onclick="filterCat('Carrera Profesional',this)">Carrera Profesional</button>
+    <button class="filter-btn" onclick="filterCat('Innovación',this)">Innovación</button>
+  </div>
+
+  <div class="container">
+    <div class="main-grid">
+      <div class="articles-section">
+        <p class="section-title">Últimas publicaciones</p>
+        <div id="articles-list"></div>
+        <div class="no-results hidden" id="no-results">No se encontraron artículos.</div>
+      </div>
+      <aside class="sidebar">
+        <div class="sidebar-card author-card">
+          <div class="author-avatar">HN</div>
+          <div class="author-name">Funcionario HCN</div>
+          <div class="author-role">Secretario de Ayuntamiento<br>Moralzarzal · Galapagar</div>
+          <div class="author-bio">Habilitado Nacional categoría de entrada. Más de una década en la administración local española. Nominado a los Premios Blogs Jurídicos de Oro.</div>
+          <div style="margin-top:1rem;text-align:left">
+            <button class="subscribe-btn" style="width:100%" onclick="showAbout()">Ver perfil completo →</button>
+          </div>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-title">Temas</div>
+          <ul class="topic-list">
+            <li class="topic-item" onclick="filterCat('Transformación Digital',null)"><span class="topic-name">Transformación Digital</span><span class="topic-count">8</span></li>
+            <li class="topic-item" onclick="filterCat('Habilitados Nacionales',null)"><span class="topic-name">Habilitados Nacionales</span><span class="topic-count">7</span></li>
+            <li class="topic-item" onclick="filterCat('Recursos Humanos',null)"><span class="topic-name">Recursos Humanos</span><span class="topic-count">5</span></li>
+            <li class="topic-item" onclick="filterCat('Contratación Pública',null)"><span class="topic-name">Contratación Pública</span><span class="topic-count">4</span></li>
+            <li class="topic-item" onclick="filterCat('Carrera Profesional',null)"><span class="topic-name">Carrera Profesional</span><span class="topic-count">4</span></li>
+            <li class="topic-item" onclick="filterCat('Innovación',null)"><span class="topic-name">Innovación</span><span class="topic-count">6</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-title">Suscríbete</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.75rem">Recibe los nuevos artículos directamente en tu correo.</p>
+          <div class="subscribe-form">
+            <input type="email" placeholder="tucorreo@ejemplo.com">
+            <button class="subscribe-btn">Suscribirme</button>
+            <span class="subscribe-note">Sin spam. Baja cuando quieras.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE VIEW -->
+<div id="article-view">
+  <div class="article-view-inner">
+    <div class="article-nav" onclick="showHome()">← Volver a todos los artículos</div>
+    <div id="article-content"></div>
+  </div>
+</div>
+
+<!-- ABOUT VIEW -->
+<div id="about-view">
+  <div class="about-inner">
+    <div class="article-nav" onclick="showHome()">← Volver al blog</div>
+    <div class="about-hero">
+      <div class="about-avatar">HN</div>
+      <div class="about-title-block">
+        <h1>Funcionario con Habilitación de Carácter Nacional</h1>
+        <p class="about-role">Secretario de Ayuntamiento · Categoría de Entrada<br>Ayuntamiento de Moralzarzal y Ayuntamiento de Galapagar (Madrid)</p>
+        <div class="badge-row">
+          <span class="credential-badge">FHCN — Secretario</span>
+          <span class="credential-badge">Cat. Entrada</span>
+          <span class="credential-badge">Madrid</span>
+          <span class="credential-badge">Blog Jurídico Nominado 2021/22</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-section">
+      <h2>Sobre el blog</h2>
+      <p>Este blog nació en 2019 con un objetivo claro: compartir reflexiones honestas sobre lo que significa ser Funcionario con Habilitación de Carácter Nacional en la España del siglo XXI. «Del escribano de concejo al todista municipal» resume perfectamente esa tensión entre la tradición centenaria de la secretaría local y las exigencias de una administración en plena transformación digital.</p>
+      <p>No es un blog de divulgación jurídica al uso. Es un espacio de pensamiento profesional, donde la experiencia directa en municipios reales se convierte en análisis y propuesta. Los temas que me preocupan son los que importan en el día a día: la carrera profesional de los habilitados, la contratación pública, la gestión del dato, la transformación digital de los pequeños ayuntamientos.</p>
+    </div>
+    <div class="about-section">
+      <h2>Trayectoria profesional</h2>
+      <p>Habilitado Nacional en la subescala de Secretaría, categoría de entrada, llevo más de una década trabajando en la administración local de la Comunidad de Madrid. Actualmente ejerzo como Secretario en los Ayuntamientos de <strong>Moralzarzal</strong> y <strong>Galapagar</strong>, dos municipios de la Sierra Noroeste que representan realidades administrativas muy distintas y complementarias.</p>
+      <p>Antes de la habilitación nacional, trabajé en el Ayuntamiento de Fuenlabrada, donde desarrollé proyectos pioneros en transformación digital, gobernanza del dato y administración abierta que me convencieron de que la innovación es posible —y necesaria— en la administración local.</p>
+    </div>
+    <div class="about-section">
+      <h2>Reconocimientos</h2>
+      <p>En 2021 y 2022, este blog fue nominado a los <strong>Premios Blogs Jurídicos de Oro</strong>, uno de los reconocimientos más prestigiosos de la blogosfera jurídica española. Esa nominación, entre blogs de altísimo nivel, fue el mejor indicador de que el enfoque práctico y crítico que defiende este espacio conecta con los profesionales del sector.</p>
+      <p>He participado como ponente en el <strong>Congreso Nacional de Innovación y Servicios Públicos (CNIS)</strong>, en jornadas de COSITAL, FECAM y otras organizaciones del ámbito local, siempre con el mismo mensaje: la administración local necesita más reflexión crítica y menos autocomplacencia.</p>
+    </div>
+    <div class="about-section">
+      <h2>Contacto</h2>
+      <p>Si eres habilitado nacional, técnico de administración local, investigador del sector público o simplemente alguien interesado en la administración local española, este blog es para ti. Puedes seguir el blog a través de WordPress o contactar a través de LinkedIn.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">HabilitadosNacionales.es</div>
+  <p>Blog profesional sobre administración pública local · Habilitados Nacionales · España</p>
+  <p style="margin-top:0.5rem">
+    <a href="https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com" target="_blank">Blog original en WordPress</a>
+    &nbsp;·&nbsp; © 2019–2026 Todos los derechos reservados
+  </p>
+</footer>
+
+<script>
+const ARTICLES = [
+  {
+    id: 1, slug: "rediseñando-carrera-profesional",
+    title: "Rediseñando la carrera profesional pública",
+    cat: "Carrera Profesional",
+    date: "22 de marzo, 2026", year: "2026", monthday: "22 mar",
+    excerpt: "Dos podcasts sobre los grandes debates de la carrera en la administración: el laberinto de los ascensos y el eterno dilema entre mérito y antigüedad.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2026/03/22/redisenando-la-carrera-profesional-prublica/",
+    body: null, featured: true
+  },
+  {
+    id: 2, slug: "digitaliza-madrid",
+    title: "Digitaliza Madrid",
+    cat: "Transformación Digital",
+    date: "28 de enero, 2026", year: "2026", monthday: "28 ene",
+    excerpt: "Aprovechar la innovación para mejorar la vida de nuestros ciudadanos de forma tangible y humana, priorizando la diversidad, la equidad y el bienestar colectivo.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2026/01/28/digitaliza-madrid/",
+    body: null
+  },
+  {
+    id: 3, slug: "rol-habilitados-nacionales-desafios-futuro",
+    title: "El rol de los Habilitados Nacionales frente a los desafíos del futuro",
+    cat: "Habilitados Nacionales",
+    date: "5 de noviembre, 2025", year: "2025", monthday: "5 nov",
+    excerpt: "Newsletter especial: cómo los Ayuntamientos aplican soluciones reales en cada área clave de modernización administrativa, desde la contratación digital hasta la gestión del dato.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2025/11/05/el-rol-de-los-habilitados-nacionales-frente-a-los-desafios-del-futuro/",
+    body: `<p><strong>Newsletter | El Rol de los Habilitados Nacionales ante los Desafíos del Futuro</strong></p>
+<p>Llevo ya bastante tiempo con este blog y aunque ahora salen algunos blogs nuevos, algunos con mucha Inteligencia Artificial, yo voy a volver a un modelo antiguo y artesanal como eran las newsletter. Espero que este cambio os guste y esta primera newsletter os sea de utilidad. Desde que empecé en la administración pública el conocimiento compartido es lo que más me hace avanzar y me da mayor satisfacción.</p>
+<p>Descubre cómo los Ayuntamientos aplican soluciones reales en cada área clave de modernización administrativa.</p>
+<h2>1. Coordinación territorial y gestión con recursos limitados</h2>
+<p>Agrupaciones de municipios para compartir servicios de secretaría e intervención, permitiendo economías de escala y mejor gestión de recursos. La plataforma para gestionar expedientes compartidos entre entidades y el registro electrónico común son la solución práctica que ya está funcionando en varias comunidades autónomas.</p>
+<h2>2. Transformación digital y modernización administrativa</h2>
+<p>El Ayuntamiento de Galapagar ha implantado actuaciones administrativas automatizadas, firma electrónica y sello de órgano para la validación de registros de entrada/salida, notificaciones y certificados, conforme al art. 13 de la Ley 40/2015 y RD 128/2018.</p>
+<h2>3. Contratación pública digital</h2>
+<p>Digitalización del proceso completo de contratación pública en plataformas como Vortal o el sistema de Licitación Electrónica del Estado. El uso de plataformas digitales garantiza la trazabilidad de los contratos, transparencia y cumplimiento de la Ley de Contratos del Sector Público.</p>
+<h2>4. Recursos Humanos en entornos municipales</h2>
+<p>Coordinación digital del personal municipal, control automatizado de asistencia y gestión documental del expediente del empleado público. Integración de software de recursos humanos para seguimiento de la plantilla, matrices de formación continua y apoyo en procesos de agrupación de municipios.</p>
+<h2>5. Fe Pública, asesoramiento legal y competencias digitales</h2>
+<p>Certificación de acuerdos colegiados y emisión de copias electrónicas auténticas mediante sistemas automatizados. Implementación masiva del sello de órgano, verificación automática de autenticidad y digitalización de libros oficiales.</p>
+<h2>6. Sociedad datificada y gestión documental digital</h2>
+<p>Implantación de archivos electrónicos de documentos con valor probatorio, sistemas de validación en blockchain y registros automáticos para la administración local.</p>
+<h2>7. Competencias, formación y futuro profesional</h2>
+<p>Programas de formación online, reciclaje digital y certificación en competencias digitales (INAP, EOI). Creación de equipos técnicos de transformación digital municipal, promoción de liderazgo innovador y flexibilidad organizativa.</p>`
+  },
+  {
+    id: 4, slug: "habilitados-nacionales-a-la-fuga",
+    title: "Habilitados nacionales a la fuga",
+    cat: "Habilitados Nacionales",
+    date: "29 de septiembre, 2025", year: "2025", monthday: "29 sep",
+    excerpt: "Más del 30% de quienes obtienen plaza como habilitados nacionales migran en los primeros años hacia grandes ayuntamientos, comunidades autónomas u órganos estatales. Análisis de datos y causas estructurales.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2025/09/29/habilitados-nacionales-a-la-fuga/",
+    body: `<p>Muchas personas que acceden a la función pública local por medio de la habilitación nacional utilizan este escalón como trampolín hacia posiciones de mayor relevancia administrativa fuera de la escala local. En esta entrada se analizan datos fiables y ejemplos concretos que ilustran la huida de la habilitación nacional hacia destinos más atractivos, mostrando tendencias y realidades del sector.</p>
+<p>Junto con la planta municipal (de la que espero poder escribir en otra ocasión) el principal problema de la situación de la habilitación nacional se da por esta causa.</p>
+<h2>Dinámica: de la escala local al puesto estatal</h2>
+<p>Estudios internos y datos recientes del Ministerio de Hacienda y Función Pública revelan que más del <strong>30% de quienes obtienen plaza como funcionarios de habilitación nacional</strong> (secretarios, interventores y tesoreros) migran en los primeros años hacia grandes ayuntamientos, comunidades autónomas u órganos estatales. La tendencia es especialmente elevada entre perfiles jóvenes y altamente cualificados que ven en la habilitación nacional un trampolín para acceder a puestos de mayor influencia, especialización y remuneración.</p>
+<h3>Ejemplos emblemáticos</h3>
+<ul>
+<li>La directora general de Protección Civil del Estado procede de la subescala de Secretaría-Intervención, pero nunca ejerció en un ayuntamiento, vinculándose directamente a puestos en la administración estatal tras la oposición.</li>
+<li>En Madrid y Málaga, los habilitados nacionales acceden a jefaturas administrativas con gran capacidad de gestión y visibilidad, lo que facilita su salto posterior a direcciones generales, subdirecciones o incluso altas responsabilidades en ministerios.</li>
+<li>En varios casos, habilitados nacionales han ocupado puestos de subdirectores generales en el INAP o ministerios como el de Política Territorial, sin apenas experiencia municipal directa.</li>
+<li>El caso de la Agencia Antifraude de Valencia ilustra cómo habilitados nacionales dirigen organismos estratégicos autonómicos.</li>
+</ul>
+<h2>Causas de la fuga</h2>
+<ul>
+<li>Condiciones laborales desfavorables en municipios pequeños, con salarios bajos y escasa proyección profesional, frente a la oferta de los grandes organismos públicos y comunidades autónomas.</li>
+<li>La escasa valoración social y administrativa de los puestos locales frente a la notoriedad de los cargos estatales o autonómicos.</li>
+<li>El prestigio de haber superado una oposición de alta exigencia, que es reconocido y valorado en todo el aparato público, facilitando la movilidad vertical y horizontal.</li>
+</ul>
+<h2>Impacto en la administración local</h2>
+<p>La migración de habilitados nacionales afecta especialmente a los ayuntamientos medianos y pequeños, que sufren vacantes crónicas y dificultades para cubrir plazas esenciales en el funcionamiento democrático local. El <strong>45% de los puestos de secretaría-intervención en municipios de menos de 5.000 habitantes</strong> están ocupados actualmente por interinos o provisionales, lo que compromete la calidad jurídica y financiera de la gestión local.</p>
+<h2>Conclusión</h2>
+<p>La huida de la habilitación nacional no es solo anecdótica, sino una tendencia creciente que responde a una administración pública cada vez más transversal y competitiva. Para revertirla, resulta necesario diseñar incentivos, mejorar las condiciones profesionales y dotar de prestigio real a la función local, evitando que la administración lo utilice únicamente como pasarela de talento hacia otros destinos más interesantes.</p>
+<blockquote>¿Y vosotros qué opináis? ¿Es una ventaja o es un problema?</blockquote>`
+  },
+  {
+    id: 5, slug: "sinfonia-digital-administracion-local",
+    title: "La sinfonía digital en la Administración Local: por qué los Habilitados Nacionales necesitan un software integral único",
+    cat: "Transformación Digital",
+    date: "22 de julio, 2025", year: "2025", monthday: "22 jul",
+    excerpt: "La transformación digital en las Administraciones Públicas españolas es una estrategia de país fundamental para la próxima década. Sin embargo, el pulso de esta digitalización se siente con mayor intensidad en el ámbito local.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2025/07/22/la-sinfonia-digital-en-la-administracion-local-por-que-los-habilitados-nacionales-necesitan-un-software-integral-unico-y-porque-nos-dirigimos-a-ese-escenario/"
+  },
+  {
+    id: 6, slug: "reinventando-formacion-administracion-local",
+    title: "Reinventando la formación en la Administración Local: hacia un modelo innovador y efectivo para el siglo XXI",
+    cat: "Recursos Humanos",
+    date: "2 de junio, 2025", year: "2025", monthday: "2 jun",
+    excerpt: "Estamos en un momento crucial que exige una profunda transformación de nuestro modelo formativo. El diagnóstico actual muestra problemas persistentes que frenan el desarrollo del talento en la administración local.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2025/06/02/reinventando-la-formacion-en-la-administracion-local-hacia-un-modelo-innovador-y-efectivo-para-el-siglo-xxi/"
+  },
+  {
+    id: 7, slug: "impulsando-administracion-siglo-xxi",
+    title: "Impulsando la Administración del Siglo XXI: un viaje a la transformación digital en el ámbito local",
+    cat: "Transformación Digital",
+    date: "16 de abril, 2025", year: "2025", monthday: "16 abr",
+    excerpt: "Del pequeño y mediano municipio a los municipios de gran población. La transformación digital emerge no solo como una tendencia, sino como una necesidad imperante para adaptarnos a las nuevas realidades tecnológicas.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2025/04/16/impulsando-la-administracion-del-siglo-xxi-un-viaje-a-la-transformacion-digital-en-el-ambito-local/"
+  },
+  {
+    id: 8, slug: "papel-habilitados-nacionales-rrhh",
+    title: "El papel de los Habilitados Nacionales en la gestión de los Recursos Humanos de una Entidad Local",
+    cat: "Recursos Humanos",
+    date: "31 de marzo, 2025", year: "2025", monthday: "31 mar",
+    excerpt: "La gestión de recursos humanos en la administración local española se erige como un pilar fundamental para la prestación de servicios públicos de calidad. Un laberinto de competencias, normativas superpuestas y desafíos específicos.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2025/03/31/el-papel-de-los-habilitados-nacionales-en-la-gestion-de-los-recursos-humanos-de-una-entidad-local/"
+  },
+  {
+    id: 9, slug: "mas-burocracia-contratacion-publica",
+    title: "Más burocracia: problemas de la contratación pública en las Entidades Locales",
+    cat: "Contratación Pública",
+    date: "30 de enero, 2025", year: "2025", monthday: "30 ene",
+    excerpt: "Desde el ya casi lejano 2017 por el que se aprobó y entró en vigor la actual Ley de Contratos del Sector Público, poco ha cambiado. Un análisis honesto sobre la simplificación prometida y nunca llegada.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2025/01/30/mas-burocracia/"
+  },
+  {
+    id: 10, slug: "unidad-dato-administracion-local",
+    title: "Proyecto de definición e inicio de la Unidad del Dato en la Administración Local",
+    cat: "Transformación Digital",
+    date: "14 de diciembre, 2024", year: "2024", monthday: "14 dic",
+    excerpt: "En un contexto donde el dato y su gestión cobra una importancia creciente, era imperativo que la administración local tomara decisiones alineadas con la Estrategia Europea de Datos.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2024/12/14/proyecto-de-definicion-e-inicio-de-la-unidad-del-dato-en-la-administracion-local/"
+  },
+  {
+    id: 11, slug: "quien-teme-directivo-publico-local",
+    title: "¿Quién teme al directivo público local?",
+    cat: "Habilitados Nacionales",
+    date: "28 de abril, 2024", year: "2024", monthday: "28 abr",
+    excerpt: "La polémica de que no sabemos si existe el directivo público local. O más bien no existe una idea homogénea de quiénes son, qué hacen y qué regulación tienen.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2024/04/28/quien-teme-al-directivo-publico-local/"
+  },
+  {
+    id: 12, slug: "valor-de-lo-pactado-habilitados-nacionales",
+    title: "El valor de lo pactado y el papel de los Habilitados Nacionales en pequeñas y medianas Entidades Locales",
+    cat: "Habilitados Nacionales",
+    date: "16 de marzo, 2024", year: "2024", monthday: "16 mar",
+    excerpt: "Negociación colectiva y el papel de los Funcionarios con Habilitación de Carácter Nacional. Diferencias entre PYMEL y municipios de gran población.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2024/03/16/el-valor-de-lo-pactado-y-el-papel-de-los-habilitados-nacionales-su-diferencia-en-pequenas-y-medianas-entidades-locales-pymel-y-municipios-de-gran-poblacion/"
+  },
+  {
+    id: 13, slug: "obligacion-funcionarios-relacionarse-electronicamente",
+    title: "La obligación de los funcionarios públicos de relacionarse electrónicamente con su Administración",
+    cat: "Transformación Digital",
+    date: "28 de enero, 2024", year: "2024", monthday: "28 ene",
+    excerpt: "En 2024, la Ley 39/2015 establece la obligación de relacionarse electrónicamente con las administraciones públicas. La aplicación ha enfrentado desafíos reales.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2024/01/28/la-obligacion-de-los-funcionarios-publicos-de-relacionarse-electronicamente-con-su-administracion/"
+  },
+  {
+    id: 14, slug: "agentes-digitales-proyecto-fuentech",
+    title: "Agentes digitales: Proyecto FuenteTech",
+    cat: "Transformación Digital",
+    date: "6 de diciembre, 2023", year: "2023", monthday: "6 dic",
+    excerpt: "Brecha digital, servicios digitales y e-administración desde el Ayuntamiento de Fuenlabrada. Un proyecto de referencia para la administración local.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2023/12/06/agentes-digitales-proyecto-fuentech/"
+  },
+  {
+    id: 15, slug: "triangulo-entidades-locales",
+    title: "El triángulo de las Entidades Locales: Políticos, Técnicos y Habilitados Nacionales",
+    cat: "Habilitados Nacionales",
+    date: "5 de octubre, 2023", year: "2023", monthday: "5 oct",
+    excerpt: "Reflexiones previas al Congreso Nacional de Innovación y Servicios Públicos CNIS sobre la relación entre los tres actores clave de la administración local.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2023/10/05/el-triangulo-de-las-entidades-locales-politicos-tecnicos-y-habilitados-nacionales/"
+  },
+  {
+    id: 16, slug: "era-exponencial",
+    title: "La era exponencial",
+    cat: "Innovación",
+    date: "22 de julio, 2023", year: "2023", monthday: "22 jul",
+    excerpt: "Opinión sobre la situación actual de ser buen servidor público en una era de cambio tecnológico acelerado. ¿Está preparada la administración para lo que viene?",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2023/07/22/la-era-exponencial/"
+  },
+  {
+    id: 17, slug: "propuestas-seleccion-empleados-publicos-3",
+    title: "Propuestas innovadoras en selección de empleados públicos locales (Parte 3): UMA, Unidad Mínima Administrativa",
+    cat: "Recursos Humanos",
+    date: "21 de mayo, 2023", year: "2023", monthday: "21 may",
+    excerpt: "Parte 3. UMA — Unidad Mínima Administrativa. Propuestas disruptivas para mejorar la selección y el acoplamiento de los nuevos empleados públicos en la administración local.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2023/05/21/propuestas-innovadoras-en-materia-de-seleccion-de-empleados-publicos-locales-especial-referencia-a-los-funcionarios-con-habilitacion-de-caracter-nacional-2/"
+  },
+  {
+    id: 18, slug: "planificacion-administracion-publica",
+    title: "La planificación en la Administración Pública",
+    cat: "Innovación",
+    date: "29 de abril, 2023", year: "2023", monthday: "29 abr",
+    excerpt: "Jornada sobre la importancia de la planificación en la administración pública. Una reflexión sobre por qué planificar bien es el primer paso para innovar de verdad.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2023/04/29/la-planificacion-en-la-administracion-publica/"
+  },
+  {
+    id: 19, slug: "propuestas-seleccion-empleados-publicos-2",
+    title: "Propuestas innovadoras en selección de empleados públicos locales (Parte 2)",
+    cat: "Recursos Humanos",
+    date: "10 de abril, 2023", year: "2023", monthday: "10 abr",
+    excerpt: "Segunda entrega de propuestas innovadoras en materia de selección de empleados públicos locales, con especial referencia a los funcionarios con habilitación de carácter nacional.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2023/04/10/propuestas-innovadoras-en-materia-de-seleccion-de-empleados-publicos-locales-especial-referencia-a-los-funcionarios-con-habilitacion-de-caracter-nacional/"
+  },
+  {
+    id: 20, slug: "propuestas-seleccion-empleados-publicos-1",
+    title: "Propuestas innovadoras en selección de empleados públicos locales (Parte 1)",
+    cat: "Recursos Humanos",
+    date: "20 de marzo, 2023", year: "2023", monthday: "20 mar",
+    excerpt: "La administración local vive un momento de colapso en lo que a la selección de empleados públicos se refiere. Propuestas con visión innovadora para cambiar el modelo.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2023/03/20/propuestas-innovadoras-en-materia-de-seleccion-de-empleados-publicos-locales-especial-referencia-a-los-funcionarios-con-habilitacion-de-caracter-nacional-parte-1/"
+  },
+  {
+    id: 21, slug: "burbujas-innovadoras-fuenlainnova",
+    title: "Burbujas innovadoras: FuenlaInnova",
+    cat: "Innovación",
+    date: "2 de enero, 2023", year: "2023", monthday: "2 ene",
+    excerpt: "¿Por qué es necesaria la innovación en las Entidades Locales? El proyecto FuenlaInnova como ejemplo de cómo una administración puede crear su propio ecosistema de innovación.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2023/01/02/burbujas-innovadoras-fuenlainnova/"
+  },
+  {
+    id: 22, slug: "repensar-funcionario-publico",
+    title: "Repensar al funcionario público (Parte 1)",
+    cat: "Carrera Profesional",
+    date: "6 de diciembre, 2022", year: "2022", monthday: "6 dic",
+    excerpt: "La administración local vive un momento de colapso en la selección de empleados públicos. ¿Cuál debería ser la finalidad de los procesos selectivos para proveer de empleados públicos?",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2022/12/06/repensar-al-funcionario-publico-parte-1/"
+  },
+  {
+    id: 23, slug: "varo-devuelveme-mis-legiones",
+    title: "Varo, devuélveme mis legiones (estabilización del empleo temporal)",
+    cat: "Carrera Profesional",
+    date: "26 de octubre, 2022", year: "2022", monthday: "26 oct",
+    excerpt: "Situación actual de los procesos de estabilización de empleo temporal en la administración pública española. Una reflexión crítica sobre sus efectos reales.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2022/10/26/varo-a-mi-las-legiones/"
+  },
+  {
+    id: 24, slug: "innovacion-desde-cero",
+    title: "La innovación desde cero",
+    cat: "Innovación",
+    date: "2 de octubre, 2022", year: "2022", monthday: "2 oct",
+    excerpt: "Desde el principio de mi carrera administrativa he intentado acercarme a personas con el gen de la innovación. Innovar es precisamente eso: no estarse quieto.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2022/10/02/la-innovacion-desde-cero/"
+  },
+  {
+    id: 25, slug: "acercar-administracion-ciudadanos",
+    title: "Otras formas de acercar la Administración a los ciudadanos",
+    cat: "Innovación",
+    date: "25 de julio, 2022", year: "2022", monthday: "25 jul",
+    excerpt: "El teatro/monólogo administrativo como herramienta de comunicación pública. La semana de la administración abierta 2022 del Ayuntamiento de Fuenlabrada.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2022/07/25/otras-formas-de-acercar-la-administracion-a-los-ciudadanos/"
+  },
+  {
+    id: 26, slug: "administracion-abierta",
+    title: "Administración abierta",
+    cat: "Innovación",
+    date: "25 de junio, 2022", year: "2022", monthday: "25 jun",
+    excerpt: "Las administraciones públicas tenemos la obligación de acercar a los ciudadanos nuestro trabajo del día a día. No lograr el 100% de lo planteado no es un fracaso, sino un avance.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2022/06/25/administracion-abierta/"
+  },
+  {
+    id: 27, slug: "respuestas-estabilizacion-empleo",
+    title: "Respuestas cortas a preguntas sobre estabilización",
+    cat: "Carrera Profesional",
+    date: "2 de mayo, 2022", year: "2022", monthday: "2 may",
+    excerpt: "Respuestas directas a las preguntas más frecuentes sobre los procesos de estabilización del empleo temporal derivados de la Ley 20/2021.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2022/05/02/respuestas-cortas-a-preguntas-de-estabilizacion/"
+  },
+  {
+    id: 28, slug: "pensar-en-grande-actuar-en-pequeno",
+    title: "Pensar en grande, actuar en pequeño",
+    cat: "Habilitados Nacionales",
+    date: "7 de marzo, 2022", year: "2022", monthday: "7 mar",
+    excerpt: "Tendemos a valorar como inmensos los retos en las administraciones públicas: transformación digital, innovación, oficina del dato, talento... Pero el cambio empieza en pequeño.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2022/03/07/pensar-en-grande-actuar-en-pequeno/"
+  },
+  {
+    id: 29, slug: "deus-ex-machina",
+    title: "Deus ex machina: la necesidad de cambio de la Administración Local",
+    cat: "Habilitados Nacionales",
+    date: "26 de julio, 2021", year: "2021", monthday: "26 jul",
+    excerpt: "La necesidad de cambio de la Administración local es más patente que nunca. Para todos los actores supone entrar en un proceso de cambio global e integral de carácter holístico.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2021/07/26/deus-ex-machina/"
+  },
+  {
+    id: 30, slug: "contradicciones-empleo-temporal",
+    title: "Las contradicciones del empleo temporal en las Administraciones Públicas",
+    cat: "Carrera Profesional",
+    date: "15 de noviembre, 2021", year: "2021", monthday: "15 nov",
+    excerpt: "Vivimos un momento de incertidumbre y tensión en torno al empleo público temporal. Su crecimiento y uso fraudulento ha provocado un problema de grandes magnitudes.",
+    wpUrl: "https://elnuevofuncionarioconhabilitaciondecaracternacional.wordpress.com/2021/11/15/las-contradicciones-del-empleo-temporal-en-las-administraciones-publicas/"
+  }
+];
+
+let currentFilter = 'all';
+let currentSearch = '';
+
+function renderArticles() {
+  const list = document.getElementById('articles-list');
+  const noResults = document.getElementById('no-results');
+  let filtered = ARTICLES.filter(a => {
+    const matchCat = currentFilter === 'all' || a.cat === currentFilter;
+    const q = currentSearch.toLowerCase();
+    const matchSearch = !q || a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.cat.toLowerCase().includes(q);
+    return matchCat && matchSearch;
+  });
+  if (filtered.length === 0) {
+    list.innerHTML = '';
+    noResults.classList.remove('hidden');
+    return;
+  }
+  noResults.classList.add('hidden');
+  list.innerHTML = filtered.map((a, i) => {
+    if (i === 0 && currentFilter === 'all' && !currentSearch) {
+      return `<div class="article-card featured" onclick="openArticle(${a.id})">
+        <span class="featured-badge">Último artículo</span>
+        <div class="card-cat">${a.cat}</div>
+        <div class="card-title">${a.title}</div>
+        <div class="card-excerpt">${a.excerpt}</div>
+        <div class="card-meta"><span>${a.date}</span><span>·</span><span>~5 min</span></div>
+      </div>`;
+    }
+    return `<div class="article-card" onclick="openArticle(${a.id})">
+      <div>
+        <div class="card-cat">${a.cat}</div>
+        <div class="card-title">${a.title}</div>
+        <div class="card-excerpt">${a.excerpt}</div>
+        <div class="card-meta"><span>${a.date}</span></div>
+      </div>
+      <div class="card-date-col">
+        <span class="card-year">${a.year}</span>
+        <span class="card-monthday">${a.monthday}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterCat(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderArticles();
+}
+
+function searchArticles(q) {
+  currentSearch = q;
+  renderArticles();
+}
+
+function openArticle(id) {
+  const a = ARTICLES.find(x => x.id === id);
+  if (!a) return;
+  const content = document.getElementById('article-content');
+  const bodyHtml = a.body
+    ? `<div class="article-body">${a.body}</div>`
+    : `<div class="article-body"><p>${a.excerpt}</p><p>Este artículo contiene contenido adicional (imágenes, podcasts o material multimedia) disponible en la publicación original.</p></div>
+       <div class="wp-link-box">📖 <strong>Ver artículo completo:</strong> <a href="${a.wpUrl}" target="_blank">Leer en WordPress →</a><br><span style="font-size:0.78rem;margin-top:4px;display:block">Se abrirá en una nueva pestaña</span></div>`;
+
+  content.innerHTML = `
+    <div class="article-header">
+      <div class="article-cat">${a.cat}</div>
+      <h1 class="article-title">${a.title}</h1>
+      <div class="article-meta">
+        <span>📅 ${a.date}</span>
+        <span>·</span>
+        <span>HabilitadosNacionales.es</span>
+        ${a.wpUrl ? `<span>·</span><span><a href="${a.wpUrl}" target="_blank" style="color:var(--navy-mid)">Ver original ↗</a></span>` : ''}
+      </div>
+    </div>
+    ${bodyHtml}`;
+
+  document.getElementById('home-view').style.display = 'none';
+  document.getElementById('about-view').style.display = 'none';
+  document.getElementById('article-view').style.display = 'block';
+  document.getElementById('nav-home').classList.remove('active');
+  window.scrollTo(0, 0);
+  history.pushState({view:'article', id}, '', `#articulo-${a.slug}`);
+}
+
+function showHome() {
+  document.getElementById('home-view').style.display = 'block';
+  document.getElementById('article-view').style.display = 'none';
+  document.getElementById('about-view').style.display = 'none';
+  document.getElementById('nav-home').classList.add('active');
+  document.getElementById('nav-about').classList.remove('active');
+  window.scrollTo(0, 0);
+  history.pushState({view:'home'}, '', '#');
+}
+
+function showAbout() {
+  document.getElementById('home-view').style.display = 'none';
+  document.getElementById('article-view').style.display = 'none';
+  document.getElementById('about-view').style.display = 'block';
+  document.getElementById('nav-home').classList.remove('active');
+  document.getElementById('nav-about').classList.add('active');
+  window.scrollTo(0, 0);
+  history.pushState({view:'about'}, '', '#sobre-mi');
+}
+
+window.addEventListener('popstate', e => {
+  const h = location.hash;
+  if (!h || h === '#') showHome();
+  else if (h === '#sobre-mi') showAbout();
+  else if (h.startsWith('#articulo-')) {
+    const slug = h.replace('#articulo-', '');
+    const a = ARTICLES.find(x => x.slug === slug);
+    if (a) openArticle(a.id);
+  }
+});
+
+renderArticles();
+</script>
+</body>
+</html>
