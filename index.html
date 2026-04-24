@@ -1040,7 +1040,12 @@ window.addEventListener('popstate', e => {
   }
 });
 
-renderArticles();
+// Ensure DOM is fully ready before rendering
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderArticles);
+} else {
+  renderArticles();
+}
 </script>
 </body>
 </html>
